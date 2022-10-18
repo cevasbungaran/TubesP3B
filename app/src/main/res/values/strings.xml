@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">TubesDokter</string>
+
+    <!-- Main Fragment   -->
+    <string name="tv_main_title">RS Lekas Sembuh</string>
+    <string name="tv_main_subtitle">Aplikasi untuk membuat janji temu dengan dokter-dokter kelas dunia dan siap melayani Anda dengan 5S</string>
+    <string name="btn_main_title">Buat Pertemuan</string>
+
+    <!-- Left Fragment   -->
+    <string name="btn_left_home">Halaman Utama</string>
+    <string name="btn_left_appoint">Pertemuan</string>
+    <string name="btn_left_doc">Dokter</string>
+    <string name="btn_left_set">Pengaturan</string>
+    <string name="btn_left_exit">Keluar</string>
+
+    <!-- Tambah_Dokter Fragment   -->
+    <string name="tv_tambah_title">Tambah Dokter</string>
+    <string name="tv_tambah_spesial">Spesialisasi</string>
+
+    <!-- Pertemuan Fragment   -->
+    <string name="tv_pertemuan_title">Buat Pertemuan</string>
+    <string name="tv_pertemuan_nama">Nama</string>
+    <string name="tv_pertemuan_dokter">Dokter</string>
+    <string name="tv_pertemuan_keluhan">Keluhan</string>
+    <string name="tv_pertemuan_tanggal">Tanggal</string>
+    <string name="tv_pertemuan_waktu">Waktu</string>
+    <string name="et_hint_nama">Masukkan Nama Anda</string>
+    <string name="et_hint_tanggal">Pilih Tanggal Pertemuan</string>
+    <string name="et_hint_waktu">Pilih Waktu Pertemuan</string>
+    <string name="btn_simpan">SIMPAN</string>
+
+    <!-- Item List Dokter   -->
+    <string name="tv_list_dokter_title">Daftar Dokter</string>
+    <string name="btn_list_dokter">+</string>
+
+    <!-- Toolbar   -->
+    <string name="openDrawer">Open</string>
+    <string name="closeDrawer">Close</string>
+</resources>

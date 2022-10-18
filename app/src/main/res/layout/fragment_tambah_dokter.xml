@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="@dimen/margin"
+        android:id="@+id/tv_tambah_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_tambah_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="@dimen/margin"
+            android:id="@+id/tv_pertemuan_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_pertemuan_nama"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_form"/>
+
+        <EditText
+            android:layout_marginLeft="@dimen/margin_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_pertemuan_nama"
+            android:hint="@string/et_hint_nama"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="@dimen/margin"
+            android:id="@+id/tv_tambah_spesialisasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_tambah_spesial"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_form"/>
+
+        <EditText
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_pertemuan_keluhan"
+            android:hint="@string/et_hint_nama"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_margin="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_simpan"
+        android:id="@+id/btn_mulai"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
