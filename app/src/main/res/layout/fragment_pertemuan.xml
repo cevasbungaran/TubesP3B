@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_simpan"
-            android:id="@+id/btn_mulai"
+            android:id="@+id/btn_simpan_pertemuan"
             android:backgroundTint="@color/grey"
             android:textColor="@color/black" />
     </LinearLayout>

@@ -32,7 +32,7 @@
             android:layout_marginLeft="@dimen/margin_form"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/et_pertemuan_nama"
+            android:id="@+id/et_tambah_nama"
             android:hint="@string/et_hint_nama"/>
     </LinearLayout>
 
@@ -54,7 +54,7 @@
             android:layout_marginLeft="@dimen/margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/et_pertemuan_keluhan"
+            android:id="@+id/et_tambah_spesialisasi"
             android:hint="@string/et_hint_nama"/>
     </LinearLayout>
 
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_simpan"
-        android:id="@+id/btn_mulai"
+        android:id="@+id/btn_simpan"
         android:backgroundTint="@color/grey"
         android:textColor="@color/black"/>
 
