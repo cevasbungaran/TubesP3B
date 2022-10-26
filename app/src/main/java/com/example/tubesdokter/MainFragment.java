@@ -1,5 +1,6 @@
 package com.example.tubesdokter;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +10,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tubesdokter.databinding.FragmentMainBinding;
 
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements View.OnClickListener {
     private FragmentMainBinding binding;
+    private FragmentListener fragmentListener;
+
     public MainFragment(){
 
     }
@@ -27,7 +30,24 @@ public class MainFragment extends Fragment {
         this.binding = FragmentMainBinding.inflate(inflater, container, false);
         View view = this.binding.getRoot();
 
-
+        this.binding.btnMulai.setOnClickListener(this);
         return view;
+    }
+
+    public void onAttach(Context context){
+        super.onAttach(context);
+        if(context instanceof FragmentListener){
+            this.fragmentListener = (FragmentListener) context;
+        }
+        else{
+            throw new ClassCastException(context.toString()+"Must implement fragment listener");
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view==this.binding.btnMulai){
+            this.fragmentListener.changePage(2);
+        }
     }
 }
