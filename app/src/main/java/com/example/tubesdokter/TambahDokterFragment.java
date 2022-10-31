@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-public class TambahDokterFragment extends Fragment implements View.OnClickListener {
+public class TambahDokterFragment extends Fragment implements View.OnClickListener, IDokterFragment {
     private FragmentTambahDokterBinding binding;
     protected PenyimpananNilaiDisplay catat;
     private DaftarDokterPresenter presenter;
@@ -84,7 +84,6 @@ public class TambahDokterFragment extends Fragment implements View.OnClickListen
             }
             this.presenter = new DaftarDokterPresenter((DaftarDokterPresenter.IMainActivity) this);
             this.presenter.add(this.binding.etTambahNama.getText().toString(), this.binding.etTambahSpesialisasi.getText().toString());
-            //this.adapter.get(this.presenter.dokters);
 
         }
     }
@@ -93,5 +92,10 @@ public class TambahDokterFragment extends Fragment implements View.OnClickListen
 
     private File getFilesDir() {
         return null;
+    }
+
+    @Override
+    public void updateToAdapter(List<Dokter> updateDokter) {
+        this.adapter.updateArray(updateDokter);
     }
 }

@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tubesdokter.databinding.FragmentDaftarDokterBinding;
 
-public class DaftarDokterFragment extends Fragment implements View.OnClickListener {
+import java.util.List;
+
+public class DaftarDokterFragment extends Fragment implements View.OnClickListener{
     private FragmentDaftarDokterBinding binding;
     private DaftarDokterAdapter adapter;
     private FragmentListener fragmentListener;
@@ -59,6 +61,8 @@ public class DaftarDokterFragment extends Fragment implements View.OnClickListen
             this.fragmentListener.changePage(5);
         }
     }
+
+
 
     /*@Override
     public void updateArray(List<Dokter> dokters) {

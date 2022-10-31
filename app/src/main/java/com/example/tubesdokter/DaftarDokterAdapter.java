@@ -16,7 +16,7 @@ public class DaftarDokterAdapter extends BaseAdapter {
 
     public DaftarDokterAdapter(Activity activity){
         this.activity = activity;
-        this.listItems = new ArrayList<Dokter>();
+        this.listItems = new ArrayList<>();
     }
 
     private class ViewHolder{
