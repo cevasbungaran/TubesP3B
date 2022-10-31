@@ -13,10 +13,13 @@ import com.example.tubesdokter.databinding.FragmentTambahDokterBinding;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class TambahDokterFragment extends Fragment implements View.OnClickListener {
     private FragmentTambahDokterBinding binding;
     protected PenyimpananNilaiDisplay catat;
+    private DaftarDokterPresenter presenter;
+    private DaftarDokterAdapter adapter;
     public TambahDokterFragment(){
 
     }
@@ -33,6 +36,7 @@ public class TambahDokterFragment extends Fragment implements View.OnClickListen
         this.binding = FragmentTambahDokterBinding.inflate(inflater, container, false);
         View view = this.binding.getRoot();
         catat = new PenyimpananNilaiDisplay(getContext());
+        this.adapter = new DaftarDokterAdapter(getActivity());
         return view;
 
     }
@@ -78,8 +82,14 @@ public class TambahDokterFragment extends Fragment implements View.OnClickListen
                     }
                 }
             }
+            this.presenter = new DaftarDokterPresenter((DaftarDokterPresenter.IMainActivity) this);
+            this.presenter.add(this.binding.etTambahNama.getText().toString(), this.binding.etTambahSpesialisasi.getText().toString());
+            //this.adapter.get(this.presenter.dokters);
+
         }
     }
+
+
 
     private File getFilesDir() {
         return null;

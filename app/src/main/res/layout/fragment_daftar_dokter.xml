@@ -25,9 +25,9 @@
         android:id="@+id/btn_tambah_dokter"
         android:layout_width="@dimen/btn_list_dokter"
         android:layout_height="@dimen/btn_list_dokter"
-        android:background="@drawable/round_button"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_button"
         android:text="@string/btn_list_dokter"
-        android:textSize="@dimen/btn_text_list_dokter"
-        android:layout_alignParentBottom="true"/>
+        android:textSize="@dimen/btn_text_list_dokter" />
 </RelativeLayout>

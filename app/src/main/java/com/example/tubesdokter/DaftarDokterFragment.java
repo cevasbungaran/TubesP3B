@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
@@ -14,6 +16,11 @@ public class DaftarDokterFragment extends Fragment implements View.OnClickListen
     private FragmentDaftarDokterBinding binding;
     private DaftarDokterAdapter adapter;
     private FragmentListener fragmentListener;
+    private DaftarDokterPresenter presenter;
+    private Button btnSimpan;
+    //private ListView listDokter;
+    private EditText nama;
+    private EditText spesialisasi;
     public DaftarDokterFragment(){
 
     }
@@ -28,6 +35,8 @@ public class DaftarDokterFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState){
         // Inflate the Layout for this fragment
         this.binding = FragmentDaftarDokterBinding.inflate(inflater, container, false);
+        this.adapter = new DaftarDokterAdapter(getActivity());
+//        this.presenter = new DaftarDokterPresenter((DaftarDokterPresenter.IMainActivity) getContext());
         this.binding.lstDokter.setAdapter(adapter);
         View view = this.binding.getRoot();
         this.binding.btnTambahDokter.setOnClickListener(this);
@@ -50,4 +59,9 @@ public class DaftarDokterFragment extends Fragment implements View.OnClickListen
             this.fragmentListener.changePage(5);
         }
     }
+
+    /*@Override
+    public void updateArray(List<Dokter> dokters) {
+        this.adapter.updateArray(dokters);
+    }*/
 }
