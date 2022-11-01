@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/et_pertemuan_nama"
-            android:hint="@string/et_hint_nama"/>
+            android:hint="@string/et_hint_keluhan"/>
     </LinearLayout>
 
     <LinearLayout
@@ -79,6 +79,7 @@
             android:hint="@string/et_hint_nama"/>
     </LinearLayout>
 
+    <!-- https://www.tutlane.com/tutorial/android/android-datepicker-with-examples -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,11 +95,13 @@
             android:textSize="@dimen/size_form"/>
 
         <EditText
+            android:inputType="date"
             android:layout_marginLeft="@dimen/margin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/form_tanggal"
-            android:hint="@string/et_hint_tanggal"/>
+            android:hint="@string/et_hint_tanggal"
+            android:datePickerMode="calendar"/>
     </LinearLayout>
 
     <LinearLayout

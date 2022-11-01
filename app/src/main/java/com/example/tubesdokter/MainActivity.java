@@ -8,9 +8,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import com.example.tubesdokter.databinding.ActivityMainBinding;
 import com.example.tubesdokter.databinding.FragmentDaftarDokterBinding;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements FragmentListener {
     private ActivityMainBinding binding;
@@ -21,6 +26,11 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
     protected FragmentManager fragmentManager;
     private FragmentTransaction ft;
     private DaftarDokterAdapter adapter;
+    /*private Button btnSimpan;
+    private ListView listDokter;
+    private DaftarDokterPresenter presenter;
+    private EditText nama;
+    private EditText spesialisasi;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +38,13 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        
-        //adapter
-        this.adapter = new DaftarDokterAdapter (this);
 
+        //adapter
+        //this.adapter = new DaftarDokterAdapter (this);
+        /*this.listDokter.setAdapter(this.adapter);
+        this.presenter = new DaftarDokterPresenter((DaftarDokterPresenter.IMainActivity) this);
+        this.btnSimpan.setOnClickListener(this);
+        this.*/
         
         
         //fragment
@@ -67,10 +80,21 @@ public class MainActivity extends AppCompatActivity implements FragmentListener 
         this.ft.commit();
         binding.drawerLayout.closeDrawers();
     }
+//    @Override
+//    public void updateArray(List<Dokter> dokters) {
+//        this.adapter.updateArray(dokters);
+//    }
 
     @Override
     public void closeApplication() {
         this.moveTaskToBack(true);
         this.finish();
     }
+
+    /*@Override
+    public void onClick(View view) {
+        if(view==btnSimpan){
+            this.presenter.add(this.nama.getText().toString(), this.spesialisasi.getText().toString());
+        }
+    }*/
 }

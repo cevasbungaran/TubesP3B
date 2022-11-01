@@ -1,5 +1,6 @@
 package com.example.tubesdokter;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,18 @@ import com.example.tubesdokter.databinding.FragmentPertemuanBinding;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Calendar;
 
 public class PertemuanFragment extends Fragment implements View.OnClickListener {
     private FragmentPertemuanBinding binding;
     protected PenyimpananNilaiDisplay catat;
+
+    //date picker needs
+    private Calendar calendar;
+    private DatePickerDialog.OnDateSetListener date;
+    private String formatedDate;
+    private String currentDate;
+
     private static final String FILE_NAME = "pertemuanDokter.txt";
     public PertemuanFragment(){
 
@@ -33,6 +42,7 @@ public class PertemuanFragment extends Fragment implements View.OnClickListener 
         // Inflate the Layout for this fragment
         this.binding = FragmentPertemuanBinding.inflate(inflater, container, false);
         View view = this.binding.getRoot();
+
         catat = new PenyimpananNilaiDisplay(getContext());
         return view;
     }

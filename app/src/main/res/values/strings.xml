@@ -25,6 +25,7 @@
     <string name="tv_pertemuan_tanggal">Tanggal</string>
     <string name="tv_pertemuan_waktu">Waktu</string>
     <string name="et_hint_nama">Masukkan Nama Anda</string>
+    <string name="et_hint_keluhan">Masukkan Keluhan Anda</string>
     <string name="et_hint_tanggal">Pilih Tanggal Pertemuan</string>
     <string name="et_hint_waktu">Pilih Waktu Pertemuan</string>
     <string name="btn_simpan">SIMPAN</string>
