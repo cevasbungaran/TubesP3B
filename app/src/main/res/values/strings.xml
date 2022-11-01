@@ -16,6 +16,8 @@
     <!-- Tambah_Dokter Fragment   -->
     <string name="tv_tambah_title">Tambah Dokter</string>
     <string name="tv_tambah_spesial">Spesialisasi</string>
+    <string name="et_hint_tambah_spesialiasi">Masukkan Spesialisasi Dokter</string>
+    <string name="et_hint_tambah_dokter">Masukkan Nama Dokter</string>
 
     <!-- Pertemuan Fragment   -->
     <string name="tv_pertemuan_title">Buat Pertemuan</string>
